@@ -34,7 +34,7 @@ jobs:
         env:
           SCHOOL_ID: "1743"
           ACCOUNT: "202214170216"
-          PASSWORD: "12345yjydqq"
+          PASSWORD: "yjy170216"
           LONGITUDE: "106.61"
           LATITUDE: "29.71"
           ADDRESS_NAME: "重庆市渝北区双龙湖街道新城广场华辰财富广场B座12-6"
