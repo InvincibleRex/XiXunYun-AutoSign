@@ -1,0 +1,46 @@
+name: autosign
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天 8 点运行
+    - cron: '0 3 * * *'   # UTC 时间 3:00（北京时间 11:00）
+    - cron: '0 6 * * *'   # UTC 时间 6:00（北京时间 14:00）
+    - cron: '0 9 * * *'   # UTC 时间 9:00（北京时间 17:00）
+    - cron: '0 12 * * *'  # UTC 时间 12:00（北京时间 20:00）
+    - cron: '0 15 * * *'  # UTC 时间 15:00（北京时间 23:00）
+  push:
+    branches:
+      - main  # 仅对主分支进行触发，您可以根据需要更改分支名称
+  workflow_dispatch:
+
+jobs:
+  run_daily_task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run main.py
+        env:
+          SCHOOL_ID: "1743"
+          ACCOUNT: "202333190103"
+          PASSWORD: "fq190103"
+          LONGITUDE: "106.36"
+          LATITUDE: "29.61"
+          ADDRESS_NAME: "重庆创飞大数据科技有限公司"
+          ADDRESS: "重庆市沙坪坝金科·天宸十一街区1幢"
+          PROVINCE: "重庆市"
+          CITY: "重庆市"
+          PUSHPLUS_SET: ${{ secrets.PUSHPLUS_SET }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+        run: python main.py
