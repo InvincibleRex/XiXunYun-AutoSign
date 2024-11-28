@@ -1,4 +1,4 @@
-name: autosign
+name: lq
 
 on:
   schedule:
