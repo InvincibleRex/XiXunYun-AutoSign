@@ -1,0 +1,41 @@
+name: Lyy
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天 8 点运行
+  push:
+    branches:
+      - main  # 仅对主分支进行触发，您可以根据需要更改分支名称
+  workflow_dispatch:
+
+jobs:
+  run_daily_task:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run main.py
+        env:
+          SCHOOL_ID: "438"
+          ACCOUNT: "20221955"
+          PASSWORD: "Lyy500350033."
+          LONGITUDE: "106.36"
+          LATITUDE: "29.61"
+          ADDRESS_NAME: "重庆创飞大数据科技有限公司"
+          ADDRESS: "重庆市沙坪坝金科·天宸十一街区1幢"
+          PROVINCE: "重庆市"
+          CITY: "重庆市"
+          PUSHPLUS_SET: ${{ secrets.PUSHPLUS_SET }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
+        run: python main.py
