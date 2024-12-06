@@ -1,4 +1,4 @@
-name: zs
+name: 暂定
 
 on:
   schedule:
@@ -28,8 +28,8 @@ jobs:
       - name: Run main.py
         env:
           SCHOOL_ID: "438"
-          ACCOUNT: "20221905"
-          PASSWORD: "zsl221905"
+          ACCOUNT: ""
+          PASSWORD: ""
           LONGITUDE: "106.36"
           LATITUDE: "29.61"
           ADDRESS_NAME: "重庆创飞大数据科技有限公司"
