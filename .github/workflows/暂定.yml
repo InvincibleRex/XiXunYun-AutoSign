@@ -27,13 +27,13 @@ jobs:
 
       - name: Run main.py
         env:
-          SCHOOL_ID: "438"
-          ACCOUNT: ""
-          PASSWORD: ""
-          LONGITUDE: "106.36"
-          LATITUDE: "29.61"
-          ADDRESS_NAME: "重庆创飞大数据科技有限公司"
-          ADDRESS: "重庆市沙坪坝金科·天宸十一街区1幢"
+          SCHOOL_ID: "1743"
+          ACCOUNT: "202214170240"
+          PASSWORD: "zh170240"
+          LONGITUDE: "106.57"
+          LATITUDE: "29.50"
+          ADDRESS_NAME: "广东公信工程建设有限公司"
+          ADDRESS: "重庆市南岸区南湖路109号靠近融侨·苹果城"
           PROVINCE: "重庆市"
           CITY: "重庆市"
           PUSHPLUS_SET: ${{ secrets.PUSHPLUS_SET }}
