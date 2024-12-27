@@ -35,10 +35,10 @@ jobs:
           SCHOOL_ID: "1743"
           ACCOUNT: "202213530209"
           PASSWORD: "zl530209"
-          LONGITUDE: "106.36"
-          LATITUDE: "29.61"
+          LONGITUDE: "106.67"
+          LATITUDE: "29.78"
           ADDRESS_NAME: "重庆创飞大数据科技有限公司"
-          ADDRESS: "重庆市沙坪坝金科·天宸十一街区1幢"
+          ADDRESS: "重庆市渝北区空港一路147号靠近保税港体育文化公园"
           PROVINCE: "重庆市"
           CITY: "重庆市"
           PUSHPLUS_SET: ${{ secrets.PUSHPLUS_SET }}
