@@ -32,7 +32,7 @@ jobs:
 
       - name: Run main.py
         env:
-          SCHOOL_ID: "1563"
+          SCHOOL_ID: "206"
           ACCOUNT: "202213530209"
           PASSWORD: "zl530209"
           LONGITUDE: "106.67"
